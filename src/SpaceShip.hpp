@@ -20,4 +20,5 @@ class  spaceShip
         //img and position
         Texture2D image_of_spaceship;
         Vector2 position_of_spaceship;
+        float speed = 6.7;
 };

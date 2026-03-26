@@ -1,4 +1,5 @@
 #pragma once
+#include "SpaceShip.hpp"
 
 class MainGame
 {
@@ -10,4 +11,6 @@ class MainGame
     void HandleInput();
   
   private:
+  spaceShip ship;//here <-- space .hpp
+
 };

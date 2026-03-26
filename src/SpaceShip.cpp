@@ -25,3 +25,28 @@ void spaceShip::DrawspaceShip()
     DrawTextureV(image_of_spaceship ,position_of_spaceship ,WHITE);
 
 }
+
+void spaceShip::FireLaser()
+{
+    
+}
+
+void spaceShip::MoveRight()
+{
+    position_of_spaceship.x += speed;
+    if (position_of_spaceship.x > (GetScreenWidth() - image_of_spaceship.width))
+    {
+        position_of_spaceship.x = GetScreenWidth() - image_of_spaceship.width;
+    }
+    
+}
+
+void spaceShip::MoveLeft()
+{
+    position_of_spaceship.x -= speed;
+    if (position_of_spaceship.x < 0)
+    {
+        position_of_spaceship.x = 0;
+    }
+    
+}
