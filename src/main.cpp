@@ -30,7 +30,7 @@ int main () {
         
             ClearBackground(BLACK);
 
-            ship.Draw();  
+            ship.DrawspaceShip();  
 
             // DrawFPS(10, 10);
             

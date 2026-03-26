@@ -10,7 +10,7 @@ class  spaceShip
         //functions for spaceShip 
         spaceShip();
         ~spaceShip();
-        void Draw();
+        void DrawspaceShip();
         void FireLaser();
         void MoveRight();
         void MoveLeft();

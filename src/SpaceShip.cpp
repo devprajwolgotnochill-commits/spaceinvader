@@ -19,7 +19,7 @@ spaceShip::~spaceShip()
 
 }
 
-void spaceShip::Draw()
+void spaceShip::DrawspaceShip()
 {
     //draw
     DrawTextureV(image_of_spaceship ,position_of_spaceship ,WHITE);
