@@ -6,8 +6,8 @@ spaceShip::spaceShip()
     image_of_spaceship = LoadTexture("Texture/spaceship.png"); 
 
     //use of vector from .hpp
-    position_of_spaceship.x = 200;
-    position_of_spaceship.y = 100;
+    position_of_spaceship.x = (GetScreenWidth() - image_of_spaceship.width) /2;
+    position_of_spaceship.y = (GetScreenHeight() -image_of_spaceship.height) /1.2;
  
 }
 

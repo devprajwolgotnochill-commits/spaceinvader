@@ -1,13 +1,13 @@
+//#pragma once does the same job as #ifndef / #define / #endif for moden compiler
 #pragma once
-#ifndef SPACE_SHIP
-#define SPACE_SHIP
 
 #include <raylib.h>
 
+//class spaceShip
 class  spaceShip
 {
     public:
-        //functions  
+        //functions for spaceShip 
         spaceShip();
         ~spaceShip();
         void Draw();
@@ -21,6 +21,3 @@ class  spaceShip
         Texture2D image_of_spaceship;
         Vector2 position_of_spaceship;
 };
-
-
-#endif
