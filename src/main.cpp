@@ -5,10 +5,10 @@
 int main () {
 
     SetTraceLogLevel(LOG_NONE);
-    const int SCREEN_WIDTH = 1280;
-    const int SCREEN_HEIGHT = 800;
+    const int SCREEN_WIDTH = 750;
+    const int SCREEN_HEIGHT = 750;
 
-    InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "PING PONG");
+    InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "spaceinvaders");
     SetTargetFPS(60);
 
     spaceShip ship;
@@ -30,14 +30,14 @@ int main () {
         
             ClearBackground(BLACK);
 
-            ship.Draw();
+            ship.Draw();  
 
-            DrawFPS(10, 10);
+            // DrawFPS(10, 10);
             
         EndDrawing();
 
     }
 
     CloseWindow();
-    return 0;
+    // return 0;
 }
