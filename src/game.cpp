@@ -20,8 +20,14 @@ void MainGame::UpdateGame()
 
 void MainGame::HandleInput()
 {
-    if(IsKeyDown(KEY_A)){ship.MoveLeft();}
+    if(IsKeyDown(KEY_A)||IsKeyDown(KEY_LEFT))
+    {
+        ship.MoveLeft();
+    }
 
-    if (IsKeyDown(KEY_D)){ship.MoveRight();}
+    if (IsKeyDown(KEY_D) || IsKeyDown(KEY_RIGHT))
+    {
+        ship.MoveRight();
+    }
 
 }
