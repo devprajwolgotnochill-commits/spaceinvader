@@ -1,4 +1,5 @@
 #include <raylib.h>
+#include "SpaceShip.hpp"
 
 
 int main () {
@@ -9,6 +10,8 @@ int main () {
 
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "PING PONG");
     SetTargetFPS(60);
+
+    spaceShip ship;
 
     while (WindowShouldClose() == false){
 
@@ -26,6 +29,8 @@ int main () {
         BeginDrawing();
         
             ClearBackground(BLACK);
+
+            ship.Draw();
 
             DrawFPS(10, 10);
             
