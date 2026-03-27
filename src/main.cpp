@@ -1,12 +1,12 @@
 #include <raylib.h>
 #include "game.hpp"
 
-
 int main () {
 
-    SetTraceLogLevel(LOG_NONE);
+    //constants
     const int SCREEN_WIDTH = 750;
     const int SCREEN_HEIGHT = 750;
+
 
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "spaceinvaders");
     SetTargetFPS(60);

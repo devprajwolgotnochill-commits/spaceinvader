@@ -11,7 +11,9 @@ MainGame::~MainGame()
 
 void MainGame::DrawGame()
 {
+    //draws space ship 
     ship.DrawspaceShip();
+
 }
 
 void MainGame::UpdateGame()
