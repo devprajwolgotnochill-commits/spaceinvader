@@ -1,4 +1,5 @@
 #include "game.hpp"
+// #include <iostream>
 
 MainGame::MainGame()
 {
@@ -35,6 +36,11 @@ void MainGame::UpdateGame()
         drawEachLaser.UpdateLaser();
     }
 
+    //unoptimized to use it in while loop because deleting allocatin can eat resource 
+    DeleteInactiveLasers(); 
+
+    // std::cout<<"Size :" <<ship.ManyLasers.size()<<std::endl;
+
 }
 
 void MainGame::HandleInput()
@@ -56,8 +62,18 @@ void MainGame::HandleInput()
 
 }
 
+//made to delete the inactive or empty vector but i think i dont need to 
 void MainGame::DeleteInactiveLasers()
 {
-    for (auto it = )
+    if (ship.ManyLasers.size() > 128){
+        for (auto dellaser = ship.ManyLasers.begin(); dellaser != ship.ManyLasers.end();)
+        {
+            if (!dellaser -> ActiveLaser){
+                dellaser = ship.ManyLasers.erase(dellaser);
+            } else{
+                ++ dellaser;
+            }
+        }
+    }
     
 }
