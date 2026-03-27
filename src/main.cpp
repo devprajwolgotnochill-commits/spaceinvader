@@ -3,6 +3,7 @@
 
 int main () {
 
+    
     //constants
     const int SCREEN_WIDTH = 750;
     const int SCREEN_HEIGHT = 750;
@@ -12,6 +13,7 @@ int main () {
     SetTargetFPS(60);
 
     MainGame game;
+  
 
     while (WindowShouldClose() == false){
 
@@ -23,6 +25,8 @@ int main () {
         //Update the game positions
         game.HandleInput();
 
+        game.UpdateGame();
+
 
 
 
@@ -32,6 +36,7 @@ int main () {
             ClearBackground(BLACK);
 
               game.DrawGame();
+
 
             // DrawFPS(10, 10);
             

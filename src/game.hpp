@@ -1,5 +1,6 @@
 #pragma once
 #include "SpaceShip.hpp"
+#include "laser.hpp"
 
 class MainGame
 {
@@ -12,5 +13,8 @@ class MainGame
   
   private:
   spaceShip ship;//here <-- space .hpp
+  //draw laser
+  // shipLaser laser = shipLaser({100 ,100} , -6.7);
+
 
 };

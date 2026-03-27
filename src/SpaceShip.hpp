@@ -2,6 +2,7 @@
 #pragma once
 
 #include <raylib.h>
+#include "laser.hpp"
 
 //class spaceShip
 class  spaceShip
