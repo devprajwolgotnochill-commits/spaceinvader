@@ -13,15 +13,28 @@ void MainGame::DrawGame()
 {
     //draws space ship 
     ship.DrawspaceShip();
+    // ship.FireLaser()
 
-    // laser.DrawLaser();
+    //dont know <shipLaser>
+    //manyLasers vector std::vector<shipLaser> manyLasers;
+    
+    for (auto& eachLaser: ship.ManyLasers){ 
+        //shipLaser <-- DrawLaser
+        eachLaser.DrawLaser();
+    }
 
 }
 
 void MainGame::UpdateGame()
 {
-    
-    // laser.UpdateLaser();
+
+    //manyLasers vector std::vector<shipLaser> manyLasers;
+    //ship.ManyLaser define vector in spaceship.hpp 
+    for (auto& drawEachLaser: ship.ManyLasers){
+        //get .update from shipLaser class in laser.hpp
+        drawEachLaser.UpdateLaser();
+    }
+
 }
 
 void MainGame::HandleInput()
@@ -41,4 +54,10 @@ void MainGame::HandleInput()
         ship.FireLaser();
     }
 
+}
+
+void MainGame::DeleteInactiveLasers()
+{
+    for (auto it = )
+    
 }

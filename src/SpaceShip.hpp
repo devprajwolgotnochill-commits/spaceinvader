@@ -3,6 +3,7 @@
 
 #include <raylib.h>
 #include "laser.hpp"
+#include <vector>
 
 //class spaceShip
 class  spaceShip
@@ -16,10 +17,15 @@ class  spaceShip
         void MoveRight();
         void MoveLeft();
 
+        std::vector<shipLaser> ManyLasers; //used in the for loop
+
+
     
     private:
         //img and position
         Texture2D image_of_spaceship;
         Vector2 position_of_spaceship;
         float speed = 6.7;
+        float fireTime ;
+        
 };

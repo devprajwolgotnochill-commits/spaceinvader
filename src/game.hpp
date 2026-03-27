@@ -12,9 +12,11 @@ class MainGame
     void HandleInput();
   
   private:
-  spaceShip ship;//here <-- space .hpp
+    spaceShip ship;//here <-- space .hpp
   //draw laser
   // shipLaser laser = shipLaser({100 ,100} , -6.7);
+    void DeleteInactiveLasers();
+
 
 
 };

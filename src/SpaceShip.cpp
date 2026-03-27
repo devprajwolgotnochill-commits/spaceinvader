@@ -8,6 +8,7 @@ spaceShip::spaceShip()
     //use of vector from .hpp
     position_of_spaceship.x = (GetScreenWidth() - image_of_spaceship.width) /2;
     position_of_spaceship.y = (GetScreenHeight() -image_of_spaceship.height) /1.2;
+    fireTime =0.0;
  
 }
 
@@ -28,7 +29,10 @@ void spaceShip::DrawspaceShip()
 
 void spaceShip::FireLaser()
 {
-    
+    if(GetTime() - fireTime >= 0.075){
+        ManyLasers.push_back(shipLaser({position_of_spaceship.x + (image_of_spaceship.width/2) - 2 ,position_of_spaceship.y},-5.7));
+        fireTime = GetTime();
+    }
 }
 
 void spaceShip::MoveRight()

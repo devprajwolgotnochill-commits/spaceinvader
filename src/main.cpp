@@ -10,7 +10,7 @@ int main () {
 
 
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "spaceinvaders");
-    SetTargetFPS(60);
+    SetTargetFPS(90);
 
     MainGame game;
   
@@ -38,7 +38,7 @@ int main () {
               game.DrawGame();
 
 
-            // DrawFPS(10, 10);
+            DrawFPS(10, 10);
             
         EndDrawing();
 
