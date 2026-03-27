@@ -65,7 +65,7 @@ void MainGame::HandleInput()
 //made to delete the inactive or empty vector but i think i dont need to 
 void MainGame::DeleteInactiveLasers()
 {
-    if (ship.ManyLasers.size() > 128){
+    if (ship.ManyLasers.size() > 256){
         for (auto dellaser = ship.ManyLasers.begin(); dellaser != ship.ManyLasers.end();)
         {
             if (!dellaser -> ActiveLaser){
