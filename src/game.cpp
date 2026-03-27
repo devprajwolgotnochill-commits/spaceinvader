@@ -1,7 +1,9 @@
 #include "game.hpp"
+
 // #include <iostream>
 
 MainGame::MainGame()
+    : gameEnemy({100, 50})
 {
 
 }
@@ -13,9 +15,11 @@ MainGame::~MainGame()
 void MainGame::DrawGame()
 {
     //draws space ship 
+    
     ship.DrawspaceShip();
     // ship.FireLaser()
 
+    gameEnemy.DrawEnemy();
     //dont know <shipLaser>
     //manyLasers vector std::vector<shipLaser> manyLasers;
     
@@ -62,7 +66,8 @@ void MainGame::HandleInput()
 
 }
 
-//made to delete the inactive or empty vector but i think i dont need to 
+//made to delete the inactive or empty vector but i think i dont need to
+//nigga optimization 
 void MainGame::DeleteInactiveLasers()
 {
     if (ship.ManyLasers.size() > 256){
