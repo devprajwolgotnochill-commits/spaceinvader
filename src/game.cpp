@@ -96,7 +96,7 @@ std::vector<enemyObstacle> MainGame::createEnemy()
 
     for (int i = 0 ; i < 4; i++){
         float offsetX = (i + 1) * enemyGap + i * enemyWidth;
-        Obstacle.push_back(enemyObstacle({offsetX ,float(GetScreenHeight() -100)}));
+        Obstacle.push_back(enemyObstacle({offsetX ,float(GetScreenHeight() -250)}));
     }
 
     return Obstacle;

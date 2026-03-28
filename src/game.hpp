@@ -1,6 +1,6 @@
 #pragma once
 #include "SpaceShip.hpp"
-#include "enemy.hpp"
+#include "enemyshield.hpp"
 
 class MainGame
 {
