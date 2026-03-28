@@ -4,9 +4,9 @@
 int main () {
 
     
-    //constants
+    //constantsdaadawdawda
     const int SCREEN_WIDTH = 750;
-    const int SCREEN_HEIGHT = 750;
+    const int SCREEN_HEIGHT = 980;
 
 
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "spaceinvaders");
