@@ -2,14 +2,9 @@
 
 // #include <iostream>
 
-MainGame::MainGame()
-    : gameEnemy({100, 50})
+MainGame::MainGame(): gameEnemy({100, 50})
 {
-
-}
-MainGame::~MainGame()
-{
-
+    //init gameEnemy with position of enemy in constructor list
 }
 
 void MainGame::DrawGame()
