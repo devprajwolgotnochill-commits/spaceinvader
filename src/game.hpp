@@ -6,19 +6,21 @@ class MainGame
 {
   public:
     MainGame();
-    // ~MainGame();
+    ~MainGame();
     void DrawGame();
     void UpdateGame();
     void HandleInput();
+    std::vector<enemyObstacle> createEnemy();
   
   private:
     spaceShip ship;//here <-- space .hpp
-    enemy gameEnemy;
-  //draw laser
-  // shipLaser laser = shipLaser({100 ,100} , -6.7);
+    // enemyObstacle gameEnemy;
+
+    enemyObstacle gameEnemy;
     void DeleteInactiveLasers();
-    std::vector<enemy> ememies;
 
+    
 
+    std::vector<enemyObstacle> Obstacle;
 
 };

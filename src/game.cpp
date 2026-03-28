@@ -5,6 +5,11 @@
 MainGame::MainGame(): gameEnemy({100, 50})
 {
     //init gameEnemy with position of enemy in constructor list
+    Obstacle = createEnemy();
+}
+
+MainGame::~MainGame()
+{
 }
 
 void MainGame::DrawGame()
@@ -14,7 +19,7 @@ void MainGame::DrawGame()
     ship.DrawspaceShip();
     // ship.FireLaser()
 
-    gameEnemy.DrawEnemy();
+    // gameEnemy.DrawEnemy();
     //dont know <shipLaser>
     //manyLasers vector std::vector<shipLaser> manyLasers;
     
@@ -22,6 +27,12 @@ void MainGame::DrawGame()
         //shipLaser <-- DrawLaser
         eachLaser.DrawLaser();
     }
+
+    for (auto& bitchassniga : Obstacle)
+    {
+        bitchassniga.DrawEnemy();
+    }
+    
 
 }
 
@@ -76,4 +87,17 @@ void MainGame::DeleteInactiveLasers()
         }
     }
     
+}
+
+std::vector<enemyObstacle> MainGame::createEnemy()
+{
+    int enemyWidth = enemyObstacle::grid_for_enemy[0].size() * 3;
+    float enemyGap = (GetScreenWidth() - (4 * enemyWidth)) / 5;
+
+    for (int i = 0 ; i < 4; i++){
+        float offsetX = (i + 1) * enemyGap + i * enemyWidth;
+        Obstacle.push_back(enemyObstacle({offsetX ,float(GetScreenHeight() -100)}));
+    }
+
+    return Obstacle;
 }
